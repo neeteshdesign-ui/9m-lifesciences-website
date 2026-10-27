@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Halden Pharma – Medicines made with care</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f9fb;--surface:#ffffff;--ink:#0e2a47;--muted:#4d637a;--line:#d6e1ea;--blue:#1f4fe0;--mint:#bfeadb;--amber:#f3b13b;--on-blue:#fff;
+--head:'Bricolage Grotesque','Trebuchet MS',sans-serif;--body:'Figtree','Segoe UI',sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08172a;--surface:#0f2440;--ink:#e9f1f8;--muted:#9bb2c8;--line:#223c5c;--blue:#6f93ff;--mint:#1c4a47;--on-blue:#08172a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#08172a;--surface:#0f2440;--ink:#e9f1f8;--muted:#9bb2c8;--line:#223c5c;--blue:#6f93ff;--mint:#1c4a47;--on-blue:#08172a;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+h1,h2,h3{font-family:var(--head);line-height:1.08;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+p{max-width:62ch;color:var(--muted);margin:0 0 1em}
+header{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font:800 22px var(--head);text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:28px;height:14px;border-radius:14px;background:linear-gradient(90deg,var(--blue) 50%,var(--amber) 50%);transform:rotate(-30deg);display:inline-block}
+nav{display:flex;gap:22px;align-items:center;font-weight:500;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--blue);color:var(--on-blue);padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:0;font:600 16px var(--body);cursor:pointer}
+.btn.alt{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+nav .btn{color:var(--on-blue);padding:9px 18px;font-size:15px}
+.hero{padding:72px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(40px,6.4vw,76px);font-weight:800}
+.hero p{font-size:19px;margin:24px 0 32px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.capsule{width:100%;max-width:420px;justify-self:center;overflow:visible}
+.capsule .a{animation:open 1.4s .3s cubic-bezier(.2,.8,.2,1) both}
+.capsule .b{animation:open2 1.4s .3s cubic-bezier(.2,.8,.2,1) both}
+.capsule .dot{animation:pop .8s 1.4s both}
+@keyframes open{from{transform:translate(0,0)}to{transform:translate(-10px,-6px)}}
+@keyframes open2{from{transform:translate(0,0)}to{transform:translate(10px,6px)}}
+@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+.stats{background:var(--surface);border-block:1px solid var(--line);padding:40px 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stats b{display:block;font:800 40px var(--head);color:var(--blue)}
+.stats span{color:var(--muted);font-size:15px}
+h2{font-size:clamp(30px,4vw,46px);margin-bottom:20px}
+.two{display:grid;grid-template-columns:1fr 1.2fr;gap:56px}
+.areas{border-top:1.5px solid var(--ink)}
+.areas details{border-bottom:1px solid var(--line);padding:20px 0}
+.areas summary{font:700 24px var(--head);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.areas summary::after{content:"+";color:var(--blue);font-size:28px;line-height:1}
+.areas details[open] summary::after{content:"–"}
+.areas details p{margin:12px 0 0}
+.pipe{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th,td{text-align:left;padding:16px 20px;border-bottom:1px solid var(--line);font-size:15px}
+th{color:var(--muted);font-weight:600}tr:last-child td{border:0}
+td strong{font-family:var(--head);font-size:17px}
+.bar{display:flex;gap:4px}.bar i{height:8px;width:36px;border-radius:4px;background:var(--line)}.bar i.on{background:var(--blue)}
+.mint{background:var(--mint)}
+.quality{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:40px}
+.quality h3{font-size:22px;margin-bottom:8px}
+.news article{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)}
+.news time{color:var(--muted);font-size:15px}
+.news h3{font-size:22px;margin-bottom:6px}
+.news p{margin:0}
+form{display:grid;gap:16px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:28px}
+label{display:grid;gap:6px;font-weight:600;font-size:15px}
+input,select,textarea{font:400 16px var(--body);padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+#msg{color:var(--blue);font-weight:600;margin:0}
+footer{background:var(--ink);color:#d6e3f0;padding:48px 0 32px;font-size:14px}
+footer p{color:#a9bdd1;max-width:90ch}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:24px}
+footer a{margin-right:18px}
+@media(max-width:820px){.hero .wrap,.two,.quality{grid-template-columns:1fr}.stats .wrap{grid-template-columns:1fr 1fr}nav a:not(.btn){display:none}section{padding:64px 0}.news article{grid-template-columns:1fr;gap:4px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<a class="logo" href="#top"><i></i>Halden Pharma</a>
+<nav aria-label="Main">
+<a href="#about">About</a><a href="#areas">Therapy areas</a><a href="#pipeline">Pipeline</a><a href="#quality">Quality</a><a href="#news">News</a>
+<a class="btn" href="#contact">Contact us</a>
+</nav>
+</div>
+</header>
+
+<main id="top">
+<section class="hero">
+<div class="wrap">
+<div>
+<h1>Medicines made with care, from lab to pharmacy shelf.</h1>
+<p>Halden Pharma develops and manufactures treatments for heart, metabolic and respiratory conditions, and makes sure they reach the people who need them.</p>
+<div class="cta"><a class="btn" href="#pipeline">See our pipeline</a><a class="btn alt" href="#about">Who we are</a></div>
+</div>
+<svg class="capsule" viewBox="0 0 420 300" role="img" aria-label="An opening medicine capsule">
+<g transform="rotate(-28 210 150)">
+<g class="a"><path d="M210 90H110a60 60 0 0 0 0 120h100z" fill="var(--blue)"/><rect x="70" y="108" width="110" height="14" rx="7" fill="#fff" opacity=".25"/></g>
+<g class="b"><path d="M210 90h100a60 60 0 0 1 0 120H210z" fill="var(--amber)"/><rect x="230" y="108" width="70" height="14" rx="7" fill="#fff" opacity=".35"/></g>
+<circle class="dot" cx="210" cy="150" r="14" fill="var(--mint)" stroke="var(--ink)" stroke-width="3"/>
+</g>
+</svg>
+</div>
+</section>
+
+<div class="stats"><div class="wrap">
+<div><b>38</b><span>years in pharmaceutical science</span></div>
+<div><b>12</b><span>medicines in clinical development</span></div>
+<div><b>64</b><span>countries where our products are available</span></div>
+<div><b>2,400</b><span>scientists, pharmacists and engineers</span></div>
+</div></div>
+
+<section id="about">
+<div class="wrap two">
+<h2>We start with the patient and work backwards.</h2>
+<div>
+<p>Halden Pharma was founded by two hospital pharmacists who were tired of treatments that worked in trials but were hard to take, hard to find or too expensive to keep taking.</p>
+<p>Today our research centres in Pune, Basel and Boston work on medicines that are effective, easy to use and made to a standard we are happy to have inspected at any time.</p>
+<p>We price for access, license selected products to local manufacturers, and publish the results of every trial we run, including the ones that did not go our way.</p>
+</div>
+</div>
+</section>
+
+<section id="areas" class="mint">
+<div class="wrap">
+<h2>Where we work</h2>
+<div class="areas">
+<details open><summary>Cardiovascular health</summary><p>Blood pressure, cholesterol and heart-failure treatments, including once-daily combination tablets that cut down the number of pills a patient takes.</p></details>
+<details><summary>Diabetes and metabolism</summary><p>Oral and injectable therapies for type 2 diabetes, plus dosing devices designed with patients who have limited hand strength or vision.</p></details>
+<details><summary>Respiratory care</summary><p>Inhaled treatments for asthma and COPD, with dose counters and low-effort devices that suit children and older adults.</p></details>
+<details><summary>Hospital medicines</summary><p>Injectables and infusions for infection and pain management, supplied to hospitals with reliable cold-chain delivery.</p></details>
+</div>
+</div>
+</section>
+
+<section id="pipeline">
+<div class="wrap">
+<h2>Our pipeline</h2>
+<p>A snapshot of programmes currently in development. Phases show how far each programme has progressed.</p>
+<div class="pipe">
+<table>
+<thead><tr><th>Programme</th><th>Condition</th><th>Progress</th><th>Current phase</th></tr></thead>
+<tbody>
+<tr><td><strong>HLD-101</strong></td><td>Hypertension</td><td><div class="bar" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div></td><td>Under regulatory review</td></tr>
+<tr><td><strong>HLD-204</strong></td><td>Type 2 diabetes</td><td><div class="bar" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></td><td>Phase III</td></tr>
+<tr><td><strong>HLD-310</strong></td><td>COPD</td><td><div class="bar" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></div></td><td>Phase II</td></tr>
+<tr><td><strong>HLD-412</strong></td><td>Heart failure</td><td><div class="bar" aria-hidden="true"><i class="on"></i><i class="on"></i><i></i><i></i></div></td><td>Phase II</td></tr>
+<tr><td><strong>HLD-505</strong></td><td>Resistant bacterial infection</td><td><div class="bar" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div></td><td>Phase I</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+
+<section id="quality" style="background:var(--surface);border-block:1px solid var(--line)">
+<div class="wrap">
+<h2>Quality is not a department. It’s how we work.</h2>
+<p>Every batch we release is traceable from raw material to the pharmacy shelf.</p>
+<div class="quality">
+<div><h3>Made to GMP standards</h3><p>Our plants are inspected by national and international regulators, and we share findings with our partners.</p></div>
+<div><h3>Safety after launch</h3><p>Our pharmacovigilance team reviews every adverse-event report and acts on safety signals within days.</p></div>
+<div><h3>Counterfeit protection</h3><p>Each pack carries a serial code that patients and pharmacists can verify in seconds.</p></div>
+</div>
+</div>
+</section>
+
+<section id="news" class="news">
+<div class="wrap">
+<h2>Latest news</h2>
+<article><time datetime="2026-10-14">14 Oct 2026</time><div><h3>HLD-101 submitted for approval</h3><p>We have filed the application for our once-daily blood pressure combination tablet.</p></div></article>
+<article><time datetime="2026-09-02">2 Sep 2026</time><div><h3>New inhaler plant opens in Pune</h3><p>The site will double our respiratory production capacity and create 400 jobs.</p></div></article>
+<article><time datetime="2026-07-21">21 Jul 2026</time><div><h3>Phase III results for HLD-204 published</h3><p>Full trial data is now available to clinicians and researchers on request.</p></div></article>
+</div>
+</section>
+
+<section id="contact" class="mint">
+<div class="wrap two">
+<div>
+<h2>Talk to us</h2>
+<p>Healthcare professionals, partners, researchers and job seekers can reach the right team through this form. We reply within two working days.</p>
+<p>Patients: please contact your doctor or pharmacist about medicines. To report a side effect, write to safety@haldenpharma.example.</p>
+</div>
+<form id="f">
+<label>Your name<input name="n" required autocomplete="name"></label>
+<label>Email<input type="email" name="e" required autocomplete="email"></label>
+<label>I’m contacting you about<select name="t"><option>Medical information</option><option>Partnership or licensing</option><option>Careers</option><option>Media</option></select></label>
+<label>Message<textarea name="m" rows="4" required></textarea></label>
+<button class="btn" type="submit">Send message</button>
+<p id="msg" role="status"></p>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<div class="row"><strong style="font-family:var(--head);font-size:20px">Halden Pharma</strong>
+<div><a href="#about">About</a><a href="#pipeline">Pipeline</a><a href="#news">News</a><a href="#contact">Contact</a></div></div>
+<p>The information on this site is for general audiences and is not medical advice. Talk to your doctor or pharmacist before starting, changing or stopping any medicine. Products and availability vary by country. Halden Pharma is a fictional company used for this website example.</p>
+<p>© 2026 Halden Pharma. All rights reserved.</p>
+</div>
+</footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('msg').textContent='Thanks, your message is on its way to our team.';
+  this.reset();
+});
+</script>
+</body>
+</html>
